@@ -149,6 +149,31 @@ body
 </style>
     </head>
     <body> 
+        
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+        
+{
+    status: 'connected',
+    authResponse: {
+        accessToken: '...',
+        expiresIn:'...',
+        signedRequest:'...',
+        userID:'...'
+    }
+}
+        
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+        
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
 
            <h1>Welcome to TIT&S Internet Access Portal</h1>
           <h2>Contact Server Room (CS M.Tech Block) for assistance</h2>   
