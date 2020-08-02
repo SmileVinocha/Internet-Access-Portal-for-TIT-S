@@ -149,20 +149,7 @@ body
 </style>
     </head>
     <body> 
-        
-FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-});
-        
-{
-    status: 'connected',
-    authResponse: {
-        accessToken: '...',
-        expiresIn:'...',
-        signedRequest:'...',
-        userID:'...'
-    }
-}
+
         
 <fb:login-button 
   scope="public_profile,email"
